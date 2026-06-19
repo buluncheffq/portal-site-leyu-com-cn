@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://buluncheffq.github.io/portal-site-leyu-com-cn/sitemap.xml
