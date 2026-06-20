@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈哈体育 · 站点知识库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f8fa;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e2025;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #0b1a2e 0%, #1a2a3f 100%);
+            padding: 3.5rem 1.5rem 3rem;
+            text-align: center;
+            color: #eef3f9;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: .75rem;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #b6cbe2;
+            line-height: 1.7;
+        }
+
+        /* 主体容器 */
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* 目录感布局：两列卡片网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1.6rem 1.8rem 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: box-shadow .2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: .9rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid #e6ecf3;
+            color: #12233a;
+        }
+
+        .card h2 i {
+            display: inline-block;
+            width: 1.6rem;
+            margin-right: .3rem;
+        }
+
+        .card p, .card li {
+            font-size: 0.95rem;
+            color: #2d3745;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            padding: .35rem 0 .35rem 1.2rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #2d6da9;
+            font-weight: bold;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #1d6ba8;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color .15s, color .15s;
+        }
+        a:hover {
+            color: #0d4370;
+            border-bottom-color: #1d6ba8;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eef3f9;
+            padding: .15rem .7rem;
+            border-radius: 20px;
+            font-size: .8rem;
+            color: #1f3855;
+            margin-right: .4rem;
+        }
+
+        .note-box {
+            background: #f3f7fe;
+            border-left: 4px solid #1d6ba8;
+            border-radius: 0 .75rem .75rem 0;
+            padding: 1rem 1.4rem;
+            margin-top: 1.2rem;
+            font-size: .92rem;
+            color: #1f2c3b;
+        }
+
+        .faq-item {
+            margin-bottom: .9rem;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #13263b;
+            margin-bottom: .2rem;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dbe2ec;
+            font-size: .9rem;
+            color: #4d5a6b;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 700px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero {
+                padding: 2.5rem 1rem 2rem;
+            }
+            .container {
+                padding: 1.5rem 1rem 3rem;
+            }
+            .card {
+                padding: 1.3rem;
+            }
+        }
+
+        @media (min-width: 701px) and (max-width: 960px) {
+            .grid {
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>哈哈体育 · 知识库</h1>
+    <p>一个围绕站点信息、使用场景与可信说明的内容集合，帮助新朋友快速了解 <a href="https://web-hahasports.com" style="color:#c1dcf7; border-bottom-color:#c1dcf7;">哈哈体育</a> 的基本情况。</p>
+</header>
+
+<main class="container">
+    <div class="grid">
+
+        <!-- 卡片：站点说明 -->
+        <div class="card">
+            <h2>📌 站点说明</h2>
+            <p><strong>哈哈体育</strong> 是一个综合信息型站点，提供体育资讯、运动知识以及相关活动参考。站点内容持续更新，覆盖多种运动项目与日常锻炼话题。</p>
+            <p style="margin-top: .8rem;">如果你正在寻找一个可以获取体育消息、了解训练思路的地方，<a href="https://web-hahasports.com">哈哈体育</a> 可以作为你的参考来源之一。所有内容均基于公开资料与常识整理，不构成专业训练建议。</p>
+            <div class="note-box">
+                ⚡ 本站内容仅供参考，运动前请结合自身状况，必要时咨询专业人士。
+            </div>
+        </div>
+
+        <!-- 卡片：内容特点 -->
+        <div class="card">
+            <h2>🧩 内容特点</h2>
+            <ul>
+                <li>覆盖足球、篮球、跑步、居家健身等常见运动</li>
+                <li>文章风格平实，偏向生活化表达</li>
+                <li>不定期更新运动小技巧与赛事资讯</li>
+                <li>不涉及博彩、下注等违规内容</li>
+            </ul>
+            <p style="margin-top: .6rem;">所有内容均由编辑人员根据公开信源整理，并标注引用来源（如有）。</p>
+        </div>
+
+        <!-- 卡片：使用场景 -->
+        <div class="card">
+            <h2>🏃 使用场景</h2>
+            <p>无论是早晨想了解前一天的赛事结果，还是想在周末前找一份运动计划参考，<strong>哈哈体育</strong> 都可以提供一些支持。</p>
+            <ul style="margin-top: .3rem;">
+                <li>快速浏览体育新闻摘要</li>
+                <li>了解某项运动的基础入门</li>
+                <li>获取日常拉伸或力量训练的小贴士</li>
+                <li>发现有趣的运动装备推荐（非广告）</li>
+            </ul>
+        </div>
+
+        <!-- 卡片：可信说明 -->
+        <div class="card">
+            <h2>🔍 可信说明</h2>
+            <p>本站坚持以下原则：</p>
+            <ul>
+                <li>不编造数据、不夸大效果</li>
+                <li>所有建议均基于常识或可靠来源</li>
+                <li>联系方式公开，接受合理反馈</li>
+                <li>站点托管于 GitHub Pages，无第三方追踪脚本</li>
+            </ul>
+            <p style="margin-top: .5rem;">如果你发现了错误信息，或对某篇内容存疑，欢迎通过站点内渠道指出。</p>
+        </div>
+
+        <!-- 卡片：提示区 -->
+        <div class="card">
+            <h2>💡 提示区</h2>
+            <p>使用 <a href="https://web-hahasports.com">哈哈体育</a> 时，建议你：</p>
+            <ul>
+                <li>对运动计划根据自身能力做调整</li>
+                <li>关注更新日期，优先阅读较新文章</li>
+                <li>结合其他专业平台交叉验证信息</li>
+                <li>避免在未经核实的情况下直接转载内容</li>
+            </ul>
+            <div class="note-box" style="margin-top: .8rem;">
+                🧠 小贴士：你可以使用站内搜索框（如果提供）快速查找特定运动话题。
+            </div>
+        </div>
+
+        <!-- 卡片：FAQ 摘要 -->
+        <div class="card">
+            <h2>❓ 常见问题摘要</h2>
+            <div class="faq-item">
+                <strong>Q：哈哈体育的内容是原创吗？</strong>
+                <p style="font-size: .9rem;">大部分为编辑整理编写，部分内容会参考公共资料并注明。整体风格偏向个人博客式表达。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q：可以转载哈哈体育的文章吗？</strong>
+                <p style="font-size: .9rem;">非商业性转载建议保留出处链接；商业使用前请先联系确认。具体以每篇文章页脚声明为准。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Q：网站会收集我的个人信息吗？</strong>
+                <p style="font-size: .9rem;">哈哈体育本身不设用户注册，也不主动收集个人信息。静态页面无追踪脚本，请放心浏览。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 相关信息区 -->
+    <div style="background: #ffffff; border-radius: 1rem; padding: 1.6rem 1.8rem; margin-top: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+        <h2 style="font-size: 1.1rem; font-weight: 600; color: #12233a; margin-bottom: .4rem;">📎 相关信息</h2>
+        <p style="font-size: .92rem; color: #2d3745;">
+            本页面为哈哈体育的独立介绍页，与主站内容相互补充。你可以直接访问 
+            <a href="https://web-hahasports.com">哈哈体育</a> 
+            浏览全部信息。如果你是通过分享链接来到这里，感谢你的关注。
+        </p>
+        <p style="font-size: .88rem; color: #4d5a6b; margin-top: .5rem;">
+            <span class="tag">版本 1.0</span>
+            <span class="tag">静态页面</span>
+            <span class="tag">无广告</span>
+        </p>
+    </div>
+
+    <div class="footer-note">
+        哈哈体育 · 知识库介绍页 ｜ 内容仅供参考，不构成专业指导
+    </div>
+</main>
+
+</body>
+</html>
