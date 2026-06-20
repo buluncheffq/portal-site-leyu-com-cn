@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐竞体育 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #faf8f5;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fffdfa;
+            border-radius: 28px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+            padding: 2.8rem 2.5rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .container {
+                padding: 2rem 1.2rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #1f1f1f;
+            border-left: 6px solid #d4b68a;
+            padding-left: 1.2rem;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #6b625a;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px solid #e7e1d9;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-top: 2.4rem;
+            margin-bottom: 1.1rem;
+            color: #3a3530;
+            border-bottom: 2px solid #ede5db;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.6rem;
+            color: #4d453e;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        a {
+            color: #8b6f4c;
+            text-decoration: none;
+            border-bottom: 1px solid #dbc9b2;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #5e4a32;
+            border-bottom-color: #8b6f4c;
+        }
+
+        /* 提示框 / 引用块 */
+        .tip-box {
+            background: #f2ede6;
+            border-left: 5px solid #cbb295;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            border-radius: 0 14px 14px 0;
+            color: #3b342d;
+            font-size: 0.96rem;
+        }
+
+        .tip-box strong {
+            color: #5e4a32;
+            font-weight: 600;
+        }
+
+        .info-card {
+            background: #f7f3ed;
+            border-radius: 18px;
+            padding: 1.4rem 1.8rem;
+            margin: 1.6rem 0;
+            border: 1px solid #e5ddd2;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.6rem 0 0;
+        }
+
+        .info-card li {
+            padding: 0.35rem 0 0.35rem 1.5rem;
+            position: relative;
+        }
+
+        .info-card li::before {
+            content: "·";
+            position: absolute;
+            left: 0.3rem;
+            color: #9d8873;
+            font-weight: 700;
+        }
+
+        .faq-item {
+            margin: 1.2rem 0;
+            padding: 0.8rem 1rem 0.8rem 1.8rem;
+            border-left: 3px solid #ddd0be;
+            background: #fcf9f5;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #3f3831;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-answer {
+            color: #5b534a;
+            font-size: 0.96rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: #e7ddd0;
+            color: #3f362e;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            margin-bottom: 0.6rem;
+        }
+
+        .link-inline {
+            white-space: nowrap;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eae1d6;
+            margin: 2.4rem 0 1.8rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #8b8074;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e7ddd2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero 区 -->
+    <h1>乐竞体育 · 知识库入口</h1>
+    <div class="subhead">一个信息型的索引页面，帮助你快速了解乐竞体育的关键内容、使用场景与常见说明</div>
+
+    <!-- 说明区：平台定位与稳定入口 -->
+    <p>
+        本页面作为信息整理页，旨在为关注者提供关于<strong>乐竞体育</strong>的结构化参考。
+        不少用户希望有一个清晰、可随时回溯的入口，以便了解其基本特点、使用环境和注意事项。
+        下面从几个方面展开，并附上指向 <a href="https://cn-home-lejing.com" class="link-inline">乐竞体育</a> 的直接链接（该链接始终指向当前资源站）。
+    </p>
+
+    <div class="tip-box">
+        <strong>提示：</strong> 如果你已经有了明确的目标，可以直接通过上方链接进入 <a href="https://cn-home-lejing.com">乐竞体育</a> 页面。
+        本页不替代原站，仅作为辅助阅读与知识整理。
+    </div>
+
+    <!-- 特点 / 功能摘要 卡片区 -->
+    <h2>📋 平台特点简览</h2>
+    <div class="info-card">
+        <ul>
+            <li><strong>稳定的访问入口</strong> — 依托固定域名，保持入口的一致性，减少信息变动带来的困惑。</li>
+            <li><strong>内容聚合与索引</strong> — 页面围绕 <a href="https://cn-home-lejing.com">乐竞体育</a> 整理相关模块，便于快速定位。</li>
+            <li><strong>清晰的层级结构</strong> — 采用目录感布局，将说明、提示、常见问题区分展示。</li>
+            <li><strong>适配多种设备</strong> — 排版基于响应式设计，在手机与桌面均保持可读性。</li>
+        </ul>
+    </div>
+
+    <!-- 场景区：什么情况下用到这个入口 -->
+    <h2>📍 适用场景参考</h2>
+    <p>
+        当你需要系统了解<strong>乐竞体育</strong>的基础信息，或者希望将某个稳定的链接作为知识库的起始点时，
+        这个页面可以充当索引。例如：作为团队内部的参考页、个人书签的补充描述、或者项目文档中的一个链接说明。
+        以下列出几种常见用途：
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.2rem 0;">
+        <span style="background: #ede7de; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.9rem; color: #3d352e;">📌 信息整理</span>
+        <span style="background: #ede7de; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.9rem; color: #3d352e;">📌 快速跳转</span>
+        <span style="background: #ede7de; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.9rem; color: #3d352e;">📌 操作指引</span>
+        <span style="background: #ede7de; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.9rem; color: #3d352e;">📌 共享书签</span>
+    </div>
+
+    <!-- 提示区：关于使用与认知 -->
+    <h2>⚙️ 提示与说明</h2>
+    <p>
+        本页并非官方声明，而是一个由个人整理的参考性知识库入口。所有指向 <a href="https://cn-home-lejing.com">乐竞体育</a> 的链接均直接导向原地址。
+        为保证信息准确，建议你在具体操作前自行核实页面内容。同时，请注意以下几点：
+    </p>
+    <ul style="margin: 0.2rem 0 1.2rem 1.6rem; color: #4a423b;">
+        <li>页面内容可能随时间调整，请以实际页面为准。</li>
+        <li>本站不存储任何敏感或违规信息，仅提供结构化访问指引。</li>
+        <li>如果你发现链接失效或内容需要更新，建议通过原渠道反馈。</li>
+    </ul>
+
+    <!-- FAQ 摘要区  -->
+    <h2>❓ 常见问题摘要</h2>
+    <div class="faq-item">
+        <div class="faq-question">Q1: 这个页面与乐竞体育本身是什么关系？</div>
+        <div class="faq-answer">这是一个独立的介绍性页面，目的是集中展示关于 <a href="https://cn-home-lejing.com">乐竞体育</a> 的知识点与入口信息，不替代原始平台。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">Q2: 为什么需要这样一个知识库入口？</div>
+        <div class="faq-answer">方便那些希望从统一说明页开始了解的用户，避免信息分散。同时也为书签、文档提供一致的引用地址。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">Q3: 页面中的链接是否安全？</div>
+        <div class="faq-answer">所有链接均指向 https://cn-home-lejing.com，你可以在浏览器地址栏确认域名。本页不含任何重定向或附加跳转。</div>
+    </div>
+
+    <!-- 相关信息区：补充说明 -->
+    <hr>
+    <h2>📎 相关信息</h2>
+    <p>
+        如果你需要把 <strong>乐竞体育</strong> 作为一个稳定的参考点，或者希望在自己的笔记、文档中引用一段结构清晰的说明，
+        本页提供的内容可以作为素材。注意保持引用的准确性和时效性。如果你在使用过程中有任何新发现，也欢迎补充完善。
+    </p>
+    <p style="background: #f6f1ea; padding: 0.8rem 1.2rem; border-radius: 12px;">
+        <span style="font-weight: 500;">📌 一句话备忘：</span>
+        页面稳定入口 → <a href="https://cn-home-lejing.com">乐竞体育</a> ，内容围绕该链接整理，不做多余推广。
+    </p>
+
+    <!-- 页脚 -->
+    <div class="footer-note">
+        知识库入口 · 信息整理页面 · 内容仅供参考
+    </div>
+
+</div>
+</body>
+</html>
